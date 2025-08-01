@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celestial Pathways</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+        }
+        .gradient-bg {
+            background: linear-gradient(to bottom, #000000, #1e3a8a, #581c87);
+        }
+    </style>
+</head>
+<body class="min-h-screen gradient-bg text-white">
+    <header class="p-6 text-center">
+        <h1 class="text-5xl font-bold tracking-wide mb-2">Celestial Pathways</h1>
+        <p class="text-lg italic text-indigo-300">Tarot • Astrology • Zodiac</p>
+    </header>
+
+    <section class="grid grid-cols-1 md:grid-cols-3 gap-6 p-6">
+        <div class="bg-black/50 shadow-xl rounded-2xl p-6 text-center">
+            <div class="mx-auto text-yellow-300 text-4xl mb-4">⭐</div>
+            <h2 class="text-2xl font-semibold mt-4 mb-2">Tarot Readings</h2>
+            <p class="text-sm text-gray-300">
+                Gain insight into your spiritual journey and uncover what lies ahead.
+            </p>
+        </div>
+        <div class="bg-black/50 shadow-xl rounded-2xl p-6 text-center">
+            <div class="mx-auto text-blue-300 text-4xl mb-4">🌙</div>
+            <h2 class="text-2xl font-semibold mt-4 mb-2">Astrology Sessions</h2>
+            <p class="text-sm text-gray-300">
+                Decode your birth chart and explore planetary alignments.
+            </p>
+        </div>
+        <div class="bg-black/50 shadow-xl rounded-2xl p-6 text-center">
+            <div class="mx-auto text-orange-300 text-4xl mb-4">☀️</div>
+            <h2 class="text-2xl font-semibold mt-4 mb-2">Zodiac Insights</h2>
+            <p class="text-sm text-gray-300">
+                Learn your sign compatibility and energetic cycles.
+            </p>
+        </div>
+    </section>
+
+    <section class="p-6 max-w-2xl mx-auto">
+        <h3 class="text-3xl text-center font-bold mb-4">Schedule Your Session</h3>
+        <form id="contactForm" class="bg-black/30 p-6 rounded-2xl shadow-lg grid gap-4">
+            <input
+                name="user_name"
+                placeholder="Your Name"
+                class="bg-white/10 p-2 rounded text-white placeholder-gray-400"
+                required
+            />
+            <input
+                name="user_email"
+                placeholder="Email Address"
+                type="email"
+                class="bg-white/10 p-2 rounded text-white placeholder-gray-400"
+                required
+            />
+            <textarea
+                name="message"
+                placeholder="What guidance are you seeking?"
+                class="bg-white/10 p-2 rounded text-white placeholder-gray-400 min-h-[120px]"
+                required
+            ></textarea>
+            <button
+                type="submit"
+                class="bg-purple-700 hover:bg-purple-800 text-white py-2 px-4 rounded transition-colors"
+            >
+                Book a Reading
+            </button>
+        </form>
+        <div id="successMessage" class="text-green-300 text-center mt-4 hidden">
+            ✨ Your request has been received. We'll be in touch soon!
+        </div>
+    </section>
+
+    <footer class="text-center text-sm text-gray-400 py-6">
+        &copy; 2025 Celestial Pathways • Readings by Divine Alignment
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const name = formData.get('user_name');
+            const email = formData.get('user_email');
+            const message = formData.get('message');
+            
+            // Show success message
+            document.getElementById('successMessage').classList.remove('hidden');
+            
+            // Reset form
+            this.reset();
+            
+            // Log the form data (in a real app, this would send to your server)
+            console.log('Form submitted:', { name, email, message });
+            
+            // Hide success message after 5 seconds
+            setTimeout(() => {
+                document.getElementById('successMessage').classList.add('hidden');
+            }, 5000);
+        });
+    </script>
+</body>
+</html> 
