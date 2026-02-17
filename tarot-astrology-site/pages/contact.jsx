@@ -11,6 +11,20 @@ export default function Contact() {
 
   const packages = [
     {
+      id: 'daily',
+      name: 'Daily Reading',
+      price: '11.11',
+      duration: '15–20 minutes',
+      description: 'Start your day with clarity. A quick daily draw for immediate guidance and what to expect today.',
+      features: [
+        '15–20 minute personalized reading',
+        'Daily guidance and insight',
+        'Single card or 3-card spread',
+        'Email delivery of reading',
+      ],
+      popular: false,
+    },
+    {
       id: 'weekly',
       name: 'Weekly Reading',
       price: '33.33',
@@ -129,7 +143,7 @@ export default function Contact() {
       {/* Packages Section */}
       <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
             {packages.map((pkg) => (
               <div
                 key={pkg.id}
