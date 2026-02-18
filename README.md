@@ -1,26 +1,29 @@
-# Your Lovely Astrologist - Tarot Card Reading Website
+# Whisper Nuance — Tarot Website
 
-A modern, mystical tarot card reading website featuring beautiful gradients, glassmorphism effects, and a complete booking system.
+**Live site:** [whispernuance.com](https://whispernuance.com)
+
+This repo has two versions. **To show the Whisper Nuance site at whispernuance.com**, deploy the **standalone** version:
+
+- In **Vercel** → Project **Settings** → **General** → set **Root Directory** to **`standalone`** → Save → **Redeploy**.
+
+Then whispernuance.com will serve `standalone/index.html` (Whisper Nuance, one-page site).
 
 ## 📁 Project Structure
 
-This repository contains two versions of the website:
+### 1. Standalone HTML (`/standalone`) — use this for whispernuance.com
+Single-file site: Whisper Nuance branding, Home / Information / Book Reading, package selection. No build step.
 
-### 1. Next.js Version (`/tarot-astrology-site`)
-A full-featured Next.js application with React components, routing, and EmailJS integration.
+**Deploy:** Set Vercel Root Directory to `standalone` (see above).
 
-**To run:**
+### 2. Next.js Version (`/tarot-astrology-site`)
+Full app with calendar booking, EmailJS, multi-step flow. Use if you want the advanced booking experience on a different URL (e.g. app.whispernuance.com).
+
+**To run locally:**
 ```bash
 cd tarot-astrology-site
 npm install
 npm run dev
 ```
-
-### 2. Standalone HTML Version (`/standalone`)
-A single HTML file that works without any build process. Perfect for quick deployment or GitHub Pages.
-
-**To use:**
-Simply open `standalone/index.html` in a web browser or host it on any static hosting service.
 
 ## 🌟 Features
 

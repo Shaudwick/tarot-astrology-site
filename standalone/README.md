@@ -1,14 +1,20 @@
-# Standalone HTML Version
+# Standalone HTML Version — whispernuance.com
 
-This is a single-file HTML version of the tarot reading website that works without any build process or dependencies.
+This is the **single-file** Whisper Nuance site (Whisper Nuance branding, three sections, package selection). Use this as the live site at **whispernuance.com**.
 
-## 🚀 Usage
+## 🌐 Deploy this as whispernuance.com (Vercel)
 
-Simply open `index.html` in your web browser, or host it on any static hosting service like:
-- GitHub Pages
-- Netlify
-- Vercel
-- Any web server
+1. Open your project on [Vercel](https://vercel.com) → **Settings** → **General**.
+2. Set **Root Directory** to: **`standalone`**
+3. Leave **Override** unchecked (use the `standalone` folder as the root).
+4. Click **Save**.
+5. Go to **Deployments** → open the **⋯** on the latest → **Redeploy**.
+
+After the redeploy, **whispernuance.com** will serve this `index.html` (Whisper Nuance, one-page site).
+
+## 🚀 Other usage
+
+Open `index.html` in your browser, or host the `standalone` folder on GitHub Pages, Netlify, or any static host.
 
 ## ✨ Features
 
