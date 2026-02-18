@@ -1,17 +1,18 @@
-# Your Lovely Astrologist - Tarot Card Reading Website
+# Whisper Nuance — Tarot Card Reading Website
 
-A modern, mystical tarot card reading website built with Next.js, featuring beautiful gradients, glassmorphism effects, and a complete booking system.
+**Website:** [whispernuance.com](https://whispernuance.com)  
+**Contact:** Whissspernuance@gmail.com
+
+A modern, mystical tarot booking site built with Next.js: choose a reading, pick a date & time (Mon–Thu, 8am–11am), and complete your booking. Owner gets notified at Whissspernuance@gmail.com; clients receive an email confirming their chosen date and time.
 
 ## 🌟 Features
 
-- **Three Main Sections:**
-  - **Home Page**: Beautiful hero section with features and call-to-action
-  - **Information Page**: Comprehensive tarot card knowledge, Major Arcana, Minor Arcana, and reading guides
-  - **Book Reading Page**: Complete booking system with two reading packages
-
-- **Reading Packages:**
-  - **Daily/Weekly Reading**: $11.11 - 20-minute personalized reading
-  - **Monthly Reading**: $33.33 - 1-hour comprehensive monthly forecast
+- **Three main sections:** Home, Information (tarot knowledge), Book Reading (multi-step booking)
+- **Reading packages:**
+  - **Daily Reading**: $11.11 — 15–20 min (same-day possible, subject to approval)
+  - **Weekly Reading**: $33.33 — 30 min (book 7+ days ahead)
+  - **Monthly Reading**: $55.55 — 1 hour (book 7+ days ahead)
+- **Booking flow:** Choose package → Calendar (Mon–Thu only; Fri–Sun grayed out) + time (8am–11am) → Form → Owner & customer emails
 
 - **Modern Design:**
   - Mystical gradient backgrounds (purple, pink, indigo)
@@ -54,6 +55,13 @@ npm run dev
 npm run build
 npm start
 ```
+
+### Deploying to Vercel (whispernuance.com)
+
+1. In Vercel, open your project → **Settings** → **General**.
+2. Set **Root Directory** to `tarot-astrology-site` (so Vercel builds the Next.js app, not a static page).
+3. Under **Domains**, add `whispernuance.com` and point your domain’s DNS to Vercel as instructed.
+4. Redeploy (e.g. push to `main` or click **Redeploy**). You should see **Whisper Nuance**, not the old static site.
 
 ## 📁 Project Structure
 

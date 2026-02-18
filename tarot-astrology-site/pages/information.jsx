@@ -210,7 +210,7 @@ export default function Information() {
       {/* Footer */}
       <footer className="border-t border-purple-500/20 py-8 px-4 mt-16">
         <div className="max-w-6xl mx-auto text-center text-gray-400">
-          <p>&copy; 2025 Your Lovely Astrologist • Mystical Guidance Through Tarot</p>
+          <p>&copy; {new Date().getFullYear()} Whisper Nuance • whispernuance.com • Tarot readings by appointment</p>
         </div>
       </footer>
     </div>

@@ -18,7 +18,7 @@ export default function Navigation() {
           <Link href="/" className="flex items-center space-x-2 group">
             <div className="text-2xl">🔮</div>
             <span className="text-xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent group-hover:from-purple-300 group-hover:via-pink-300 transition-all">
-              Your Lovely Astrologist
+              Whisper Nuance
             </span>
           </Link>
           

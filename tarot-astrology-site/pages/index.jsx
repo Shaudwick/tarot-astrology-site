@@ -13,7 +13,7 @@ export default function Home() {
           <div className="inline-block mb-6">
             <div className="flex items-center space-x-2 bg-purple-500/20 backdrop-blur-sm border border-purple-400/30 rounded-full px-6 py-2">
               <Sparkles className="text-purple-300" size={20} />
-              <span className="text-purple-200 text-sm font-medium">Mystical Guidance Awaits</span>
+              <span className="text-purple-200 text-sm font-medium">Whisper Nuance — Tarot by nuance</span>
             </div>
           </div>
           
@@ -129,7 +129,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="border-t border-purple-500/20 py-8 px-4">
         <div className="max-w-6xl mx-auto text-center text-gray-400">
-          <p>&copy; 2025 Your Lovely Astrologist • Mystical Guidance Through Tarot</p>
+          <p>&copy; {new Date().getFullYear()} Whisper Nuance • whispernuance.com • Tarot readings by appointment</p>
         </div>
       </footer>
     </div>

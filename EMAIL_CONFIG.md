@@ -1,35 +1,50 @@
-# Email Configuration
+# Email Configuration — Whisper Nuance
 
-## EmailJS Setup
+## Booking notifications
 
-All booking form submissions are configured to send to: **c_route@yahoo.com**
+All booking form submissions are configured to notify: **Whissspernuance@gmail.com**
 
-### Configuration Steps:
+Customer confirmations are sent to the email address they enter on the form and include their **chosen date and time**.
 
-1. **Log in to EmailJS** (https://www.emailjs.com/)
-2. **Go to Email Templates**
-3. **Update template_fcvr94b** (Astrologist notification template):
-   - Set "To Email" field to: `c_route@yahoo.com`
-   - Ensure the template includes all form fields:
-     - `{{user_name}}`
-     - `{{user_email}}`
-     - `{{user_phone}}`
-     - `{{message}}`
-     - `{{preferred_date}}`
-     - `{{package_name}}`
-     - `{{package_price}}`
-     - `{{package_duration}}`
+---
 
-4. **Verify template_aybycuf** (Guest confirmation):
-   - This sends a confirmation to the customer
-   - Uses `{{user_email}}` as the recipient
+## EmailJS setup
 
-### Current EmailJS Settings:
+1. Log in at [EmailJS](https://www.emailjs.com/).
+2. Open **Email Templates**.
+
+### Owner notification (you)
+
+- **Template:** `template_fcvr94b` (or your “new booking” template).
+- **To Email:** `Whissspernuance@gmail.com`
+- **Subject (example):** `New booking: {{package_name}} — {{booking_date}} at {{booking_time}}`
+- **Body:** Include at least:
+  - `{{user_name}}`
+  - `{{user_email}}`
+  - `{{user_phone}}`
+  - `{{message}}`
+  - `{{booking_date}}`
+  - `{{booking_time}}`
+  - `{{package_name}}`
+  - `{{package_price}}`
+  - `{{package_duration}}`
+
+### Customer confirmation
+
+- **Template:** `template_aybycuf` (or your “booking confirmation” template).
+- **To:** `{{user_email}}`
+- **Subject (example):** `Your Whisper Nuance reading is confirmed — {{booking_date}} at {{booking_time}}`
+- **Body:** Include the customer’s chosen **date** and **time** so they have a clear confirmation.
+
+---
+
+## Current EmailJS settings (in code)
+
 - Service ID: `service_6itarzq`
 - Public Key: `Kh4L6GyJRqfgckSwt`
-- Astrologist Template: `template_fcvr94b` → **c_route@yahoo.com**
-- Guest Template: `template_aybycuf` → Customer's email
+- Owner template: `template_fcvr94b` → set **To** to **Whissspernuance@gmail.com**
+- Guest template: `template_aybycuf` → sends to `{{user_email}}` with confirmation including chosen date/time
 
-### Testing:
-After configuration, test the booking form to ensure emails are delivered to c_route@yahoo.com.
+## Website
 
+- **URL:** https://whispernuance.com
