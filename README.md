@@ -2,11 +2,9 @@
 
 **Live site:** [whispernuance.com](https://whispernuance.com)
 
-The **Whisper Nuance** site is at the **repo root**: `index.html` + `vercel.json`. No Root Directory needed.
+The **Whisper Nuance** site is at the **repo root**: `index.html` + `vercel.json`.
 
-- In **Vercel** → Project **Settings** → **General** → leave **Root Directory** **empty** (or `.`).  
-- Vercel will serve the root `index.html` (Whisper Nuance).  
-- Push to `main` or click **Redeploy** to update.
+**Vercel:** Leave **Root Directory empty**. Do not type "public" or "standalone". The root `index.html` will be served automatically.
 
 ## 📁 Project Structure
 

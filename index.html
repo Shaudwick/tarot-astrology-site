@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whisper Nuance — Tarot Card Readings | whispernuance.com</title>
+    <meta name="description" content="Tarot readings by Whisper Nuance. Daily, weekly, and monthly guidance. Book at whispernuance.com.">
+    <link rel="canonical" href="https://whispernuance.com">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        * { scroll-behavior: smooth; }
+        body { font-family: 'Georgia', serif; }
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: #0f0f23; }
+        ::-webkit-scrollbar-thumb { background: linear-gradient(to bottom, #8b5cf6, #ec4899); border-radius: 5px; }
+        .nav-active { background: linear-gradient(to right, rgba(139, 92, 246, 0.5), rgba(236, 72, 153, 0.5)); box-shadow: 0 4px 15px rgba(139, 92, 246, 0.5); }
+    </style>
+</head>
+<body class="min-h-screen bg-gradient-to-b from-black via-indigo-950 via-purple-950 to-black text-white">
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-purple-500/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="#home" class="flex items-center space-x-2 group">
+                    <div class="text-2xl">🔮</div>
+                    <span class="text-xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">Whisper Nuance</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-1">
+                    <a href="#home" class="nav-link flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 text-gray-300 hover:text-white hover:bg-white/5"><i data-lucide="sparkles" class="w-4 h-4"></i><span class="font-medium">Home</span></a>
+                    <a href="#information" class="nav-link flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 text-gray-300 hover:text-white hover:bg-white/5"><i data-lucide="book-open" class="w-4 h-4"></i><span class="font-medium">Information</span></a>
+                    <a href="#contact" class="nav-link flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 text-gray-300 hover:text-white hover:bg-white/5"><i data-lucide="message-circle" class="w-4 h-4"></i><span class="font-medium">Book Reading</span></a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white p-2"><i data-lucide="menu" class="w-6 h-6"></i></button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden border-t border-purple-500/20 bg-black/95 backdrop-blur-md">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#home" class="mobile-nav-link flex items-center space-x-2 px-4 py-3 rounded-lg transition-all text-gray-300 hover:text-white hover:bg-white/5"><i data-lucide="sparkles" class="w-5 h-5"></i><span class="font-medium">Home</span></a>
+                <a href="#information" class="mobile-nav-link flex items-center space-x-2 px-4 py-3 rounded-lg transition-all text-gray-300 hover:text-white hover:bg-white/5"><i data-lucide="book-open" class="w-5 h-5"></i><span class="font-medium">Information</span></a>
+                <a href="#contact" class="mobile-nav-link flex items-center space-x-2 px-4 py-3 rounded-lg transition-all text-gray-300 hover:text-white hover:bg-white/5"><i data-lucide="message-circle" class="w-5 h-5"></i><span class="font-medium">Book Reading</span></a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="relative pt-32 pb-20 px-4 overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(139,92,246,0.1),transparent_50%)]"></div>
+        <div class="max-w-6xl mx-auto text-center relative z-10">
+            <div class="inline-block mb-6">
+                <div class="flex items-center space-x-2 bg-purple-500/20 backdrop-blur-sm border border-purple-400/30 rounded-full px-6 py-2">
+                    <i data-lucide="sparkles" class="text-purple-300 w-5 h-5"></i>
+                    <span class="text-purple-200 text-sm font-medium">Whisper Nuance — Tarot by nuance</span>
+                </div>
+            </div>
+            <h1 class="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-purple-200 via-pink-200 to-purple-200 bg-clip-text text-transparent leading-tight">Unveil Your<br><span class="bg-gradient-to-r from-pink-300 via-purple-300 to-pink-300 bg-clip-text text-transparent">Cosmic Destiny</span></h1>
+            <p class="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">Discover the wisdom of the tarot cards and unlock the mysteries of your daily, weekly, and monthly journey through life.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="#contact" class="group relative px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full font-semibold text-lg hover:from-purple-500 hover:to-pink-500 transition-all duration-300 shadow-lg shadow-purple-500/50 hover:shadow-xl hover:shadow-purple-500/70 flex items-center space-x-2">
+                    <span>Book Your Reading</span>
+                    <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+                </a>
+                <a href="#information" class="px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full font-semibold text-lg hover:bg-white/20 transition-all duration-300">Learn About Tarot</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-300 to-pink-300 bg-clip-text text-transparent">What Awaits You</h2>
+                <p class="text-gray-400 text-lg max-w-2xl mx-auto">Experience personalized tarot readings tailored to your spiritual journey</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="group relative bg-gradient-to-br from-purple-900/30 to-pink-900/30 backdrop-blur-sm border border-purple-500/30 rounded-2xl p-8 hover:border-purple-400/50 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/20">
+                    <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"><i data-lucide="star" class="text-white w-8 h-8"></i></div>
+                    <h3 class="text-2xl font-bold mb-4 text-purple-200">Daily Guidance</h3>
+                    <p class="text-gray-300 leading-relaxed">Start each day with clarity and purpose. Our daily readings reveal what the cards hold for your immediate future.</p>
+                </div>
+                <div class="group relative bg-gradient-to-br from-indigo-900/30 to-purple-900/30 backdrop-blur-sm border border-indigo-500/30 rounded-2xl p-8 hover:border-indigo-400/50 transition-all duration-300 hover:shadow-2xl hover:shadow-indigo-500/20">
+                    <div class="w-16 h-16 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"><i data-lucide="moon" class="text-white w-8 h-8"></i></div>
+                    <h3 class="text-2xl font-bold mb-4 text-indigo-200">Weekly Insights</h3>
+                    <p class="text-gray-300 leading-relaxed">Navigate your week with confidence. Weekly readings provide deeper insights into upcoming opportunities and challenges.</p>
+                </div>
+                <div class="group relative bg-gradient-to-br from-pink-900/30 to-purple-900/30 backdrop-blur-sm border border-pink-500/30 rounded-2xl p-8 hover:border-pink-400/50 transition-all duration-300 hover:shadow-2xl hover:shadow-pink-500/20">
+                    <div class="w-16 h-16 bg-gradient-to-br from-pink-500 to-purple-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"><i data-lucide="layers" class="text-white w-8 h-8"></i></div>
+                    <h3 class="text-2xl font-bold mb-4 text-pink-200">Monthly Forecast</h3>
+                    <p class="text-gray-300 leading-relaxed">Plan ahead with comprehensive monthly readings. Understand the broader patterns shaping your life's journey.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="relative bg-gradient-to-br from-purple-900/40 via-pink-900/40 to-purple-900/40 backdrop-blur-sm border border-purple-500/30 rounded-3xl p-12 overflow-hidden">
+                <div class="relative z-10">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-200 to-pink-200 bg-clip-text text-transparent">Ready to Begin Your Journey?</h2>
+                    <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Connect with the ancient wisdom of tarot and discover the guidance you seek. Book your reading today.</p>
+                    <a href="#contact" class="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full font-semibold text-lg hover:from-purple-500 hover:to-pink-500 transition-all duration-300 shadow-lg shadow-purple-500/50 hover:shadow-xl hover:shadow-purple-500/70"><span>Book Now</span><i data-lucide="arrow-right" class="w-5 h-5"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="information" class="py-20 px-4 pt-32">
+        <div class="max-w-6xl mx-auto text-center mb-16">
+            <div class="inline-block mb-6">
+                <div class="flex items-center space-x-2 bg-purple-500/20 backdrop-blur-sm border border-purple-400/30 rounded-full px-6 py-2">
+                    <i data-lucide="book-open" class="text-purple-300 w-5 h-5"></i>
+                    <span class="text-purple-200 text-sm font-medium">Ancient Wisdom</span>
+                </div>
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-200 via-pink-200 to-purple-200 bg-clip-text text-transparent">The Art of Tarot</h1>
+            <p class="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">Discover the rich history, symbolism, and meaning behind the tarot cards that guide your spiritual journey.</p>
+        </div>
+        <div class="max-w-6xl mx-auto">
+            <div class="bg-gradient-to-br from-purple-900/30 to-pink-900/30 backdrop-blur-sm border border-purple-500/30 rounded-3xl p-8 md:p-12 mb-16">
+                <h2 class="text-4xl font-bold mb-6 text-purple-200">What is Tarot?</h2>
+                <div class="space-y-4 text-gray-300 text-lg leading-relaxed">
+                    <p>Tarot is an ancient divination tool that uses a deck of 78 cards to provide insight, guidance, and reflection. Each card carries its own unique symbolism and meaning, drawn from centuries of spiritual tradition and wisdom.</p>
+                    <p>The tarot deck consists of two main parts: the Major Arcana (22 cards representing life's spiritual lessons) and the Minor Arcana (56 cards representing day-to-day experiences). Together, they create a comprehensive map of the human experience, offering clarity on past, present, and potential future events.</p>
+                    <p>Tarot readings are not about predicting a fixed future, but rather about understanding the energies and patterns at play in your life. The cards serve as a mirror, reflecting your inner wisdom and helping you make informed decisions aligned with your highest good.</p>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-6xl mx-auto mb-16">
+            <h2 class="text-4xl font-bold mb-4 text-center bg-gradient-to-r from-purple-300 to-pink-300 bg-clip-text text-transparent">The Major Arcana</h2>
+            <p class="text-center text-gray-400 mb-12 max-w-2xl mx-auto">The 22 cards of the Major Arcana represent significant life events and spiritual lessons.</p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-gradient-to-br from-purple-900/20 to-pink-900/20 backdrop-blur-sm border border-purple-500/20 rounded-2xl p-6 hover:border-purple-400/50 transition-all duration-300">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center flex-shrink-0"><i data-lucide="sparkles" class="text-white w-6 h-6"></i></div>
+                        <div class="flex-1"><h3 class="text-xl font-bold mb-2 text-purple-200">The Fool</h3><p class="text-gray-300 text-sm leading-relaxed">New beginnings, innocence, spontaneity</p></div>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-purple-900/20 to-pink-900/20 backdrop-blur-sm border border-purple-500/20 rounded-2xl p-6 hover:border-purple-400/50 transition-all duration-300">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center flex-shrink-0"><i data-lucide="wand-2" class="text-white w-6 h-6"></i></div>
+                        <div class="flex-1"><h3 class="text-xl font-bold mb-2 text-purple-200">The Magician</h3><p class="text-gray-300 text-sm leading-relaxed">Manifestation, resourcefulness, power</p></div>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-purple-900/20 to-pink-900/20 backdrop-blur-sm border border-purple-500/20 rounded-2xl p-6 hover:border-purple-400/50 transition-all duration-300">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center flex-shrink-0"><i data-lucide="moon" class="text-white w-6 h-6"></i></div>
+                        <div class="flex-1"><h3 class="text-xl font-bold mb-2 text-purple-200">The High Priestess</h3><p class="text-gray-300 text-sm leading-relaxed">Intuition, sacred knowledge, divine feminine</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 px-4 pt-32">
+        <div class="max-w-6xl mx-auto text-center mb-16">
+            <div class="inline-block mb-6">
+                <div class="flex items-center space-x-2 bg-purple-500/20 backdrop-blur-sm border border-purple-400/30 rounded-full px-6 py-2">
+                    <i data-lucide="calendar" class="text-purple-300 w-5 h-5"></i>
+                    <span class="text-purple-200 text-sm font-medium">Book Your Reading</span>
+                </div>
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-200 via-pink-200 to-purple-200 bg-clip-text text-transparent">Schedule Your Session</h1>
+            <p class="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">Choose the perfect reading package for your spiritual journey and let the cards reveal what the universe has in store for you.</p>
+        </div>
+        <div class="max-w-6xl mx-auto mb-12">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div id="package-daily" class="package-card relative bg-gradient-to-br from-indigo-900/30 to-purple-900/30 backdrop-blur-sm border-2 border-purple-500/30 rounded-3xl p-8 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/30 cursor-pointer">
+                    <div class="flex items-center justify-between mb-4"><h3 class="text-3xl font-bold text-purple-200">Daily Reading</h3><div class="package-check w-6 h-6 rounded-full border-2 border-gray-400 flex items-center justify-center"></div></div>
+                    <div class="flex items-baseline space-x-2 mb-4"><span class="text-5xl font-bold bg-gradient-to-r from-purple-300 to-pink-300 bg-clip-text text-transparent">$11.11</span></div>
+                    <div class="flex items-center space-x-2 text-gray-300 mb-6"><i data-lucide="clock" class="w-4 h-4"></i><span>15–20 minutes</span></div>
+                    <p class="text-gray-300 mb-6 leading-relaxed">Start your day with clarity. A quick daily draw for immediate guidance and what to expect today.</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start space-x-3"><i data-lucide="sparkles" class="text-purple-400 flex-shrink-0 mt-1 w-4 h-4"></i><span class="text-gray-300 text-sm">15–20 minute personalized reading</span></li>
+                        <li class="flex items-start space-x-3"><i data-lucide="sparkles" class="text-purple-400 flex-shrink-0 mt-1 w-4 h-4"></i><span class="text-gray-300 text-sm">Daily guidance and insight</span></li>
+                        <li class="flex items-start space-x-3"><i data-lucide="sparkles" class="text-purple-400 flex-shrink-0 mt-1 w-4 h-4"></i><span class="text-gray-300 text-sm">Single card or 3-card spread</span></li>
+                        <li class="flex items-start space-x-3"><i data-lucide="sparkles" class="text-purple-400 flex-shrink-0 mt-1 w-4 h-4"></i><span class="text-gray-300 text-sm">Email delivery of reading</span></li>
+                    </ul>
+                </div>
+                <div id="package-weekly" class="package-card relative bg-gradient-to-br from-indigo-900/30 to-purple-900/30 backdrop-blur-sm border-2 border-purple-500/30 rounded-3xl p-8 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/30 cursor-pointer">
+                    <div class="flex items-center justify-between mb-4"><h3 class="text-3xl font-bold text-purple-200">Weekly Reading</h3><div class="package-check w-6 h-6 rounded-full border-2 border-gray-400 flex items-center justify-center"></div></div>
+                    <div class="flex items-baseline space-x-2 mb-4"><span class="text-5xl font-bold bg-gradient-to-r from-purple-300 to-pink-300 bg-clip-text text-transparent">$33.33</span></div>
+                    <div class="flex items-center space-x-2 text-gray-300 mb-6"><i data-lucide="clock" class="w-4 h-4"></i><span>30 minutes</span></div>
+                    <p class="text-gray-300 mb-6 leading-relaxed">Perfect for weekly insights and guidance. Get clarity on immediate questions and short-term opportunities.</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start space-x-3"><i data-lucide="sparkles" class="text-purple-400 flex-shrink-0 mt-1 w-4 h-4"></i><span class="text-gray-300 text-sm">30-minute personalized reading</span></li>
+                        <li class="flex items-start space-x-3"><i data-lucide="sparkles" class="text-purple-400 flex-shrink-0 mt-1 w-4 h-4"></i><span class="text-gray-300 text-sm">Weekly guidance and insights</span></li>
+                        <li class="flex items-start space-x-3"><i data-lucide="sparkles" class="text-purple-400 flex-shrink-0 mt-1 w-4 h-4"></i><span class="text-gray-300 text-sm">3-card spread</span></li>
+                    </ul>
+                </div>
+                <div id="package-monthly" class="package-card relative bg-gradient-to-br from-purple-900/40 to-pink-900/40 border-purple-400/50 backdrop-blur-sm border-2 rounded-3xl p-8 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/30 cursor-pointer">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2"><div class="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-1 rounded-full text-sm font-semibold">Most Popular</div></div>
+                    <div class="flex items-center justify-between mb-4"><h3 class="text-3xl font-bold text-purple-200">Monthly Reading</h3><div class="package-check w-6 h-6 rounded-full border-2 border-gray-400 flex items-center justify-center"></div></div>
+                    <div class="flex items-baseline space-x-2 mb-4"><span class="text-5xl font-bold bg-gradient-to-r from-purple-300 to-pink-300 bg-clip-text text-transparent">$55.55</span></div>
+                    <div class="flex items-center space-x-2 text-gray-300 mb-6"><i data-lucide="clock" class="w-4 h-4"></i><span>1 hour</span></div>
+                    <p class="text-gray-300 mb-6 leading-relaxed">Comprehensive monthly forecast with deep insights into the patterns and energies shaping your month ahead.</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start space-x-3"><i data-lucide="sparkles" class="text-purple-400 flex-shrink-0 mt-1 w-4 h-4"></i><span class="text-gray-300 text-sm">1-hour comprehensive reading</span></li>
+                        <li class="flex items-start space-x-3"><i data-lucide="sparkles" class="text-purple-400 flex-shrink-0 mt-1 w-4 h-4"></i><span class="text-gray-300 text-sm">Full month forecast</span></li>
+                        <li class="flex items-start space-x-3"><i data-lucide="sparkles" class="text-purple-400 flex-shrink-0 mt-1 w-4 h-4"></i><span class="text-gray-300 text-sm">Celtic Cross spread (10 cards)</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-2xl mx-auto">
+            <div class="bg-gradient-to-br from-purple-900/30 to-pink-900/30 backdrop-blur-sm border border-purple-500/30 rounded-3xl p-8 md:p-12">
+                <h2 class="text-3xl font-bold mb-6 text-center text-purple-200">Complete Your Booking</h2>
+                <div id="form-message" class="hidden mb-6 p-4 rounded-lg"></div>
+                <form id="booking-form" class="space-y-6">
+                    <div><label class="block text-gray-300 mb-2 font-medium">Your Name *</label><input name="user_name" type="text" required class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500" placeholder="Enter your full name"></div>
+                    <div><label class="block text-gray-300 mb-2 font-medium">Email Address *</label><input name="user_email" type="email" required class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500" placeholder="your.email@example.com"></div>
+                    <div><label class="block text-gray-300 mb-2 font-medium">Phone (Optional)</label><input name="user_phone" type="tel" class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500" placeholder="(555) 123-4567"></div>
+                    <div><label class="block text-gray-300 mb-2 font-medium">What guidance are you seeking? *</label><textarea name="message" required rows="5" class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 resize-none" placeholder="Your question or focus for the reading..."></textarea></div>
+                    <div><label class="block text-gray-300 mb-2 font-medium">Preferred Date & Time</label><input name="preferred_date" type="text" class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500" placeholder="e.g., Weekday mornings 8–11am"></div>
+                    <div id="selected-package" class="hidden p-4 bg-purple-500/20 border border-purple-400/30 rounded-lg"><p class="text-sm text-gray-300 mb-1">Selected Package:</p><p class="font-semibold text-purple-200"></p></div>
+                    <button type="submit" class="w-full py-4 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg font-semibold text-lg hover:from-purple-500 hover:to-pink-500 transition-all shadow-lg shadow-purple-500/50 disabled:opacity-50 flex items-center justify-center space-x-2"><span>Submit Booking Request</span><i data-lucide="sparkles" class="w-5 h-5"></i></button>
+                </form>
+                <p class="text-center text-gray-400 text-sm mt-6">After submitting, we'll contact you within 24 hours to confirm your reading. Questions? Email <a href="mailto:Whissspernuance@gmail.com" class="text-purple-300 hover:underline">Whissspernuance@gmail.com</a>.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="border-t border-purple-500/20 py-8 px-4 mt-16">
+        <div class="max-w-6xl mx-auto text-center text-gray-400">
+            <p>&copy; 2025 Whisper Nuance • whispernuance.com • Tarot readings by appointment</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() { document.getElementById('mobile-menu').classList.toggle('hidden'); });
+        function updateActiveNav() {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-link, .mobile-nav-link');
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => { if (window.pageYOffset >= section.offsetTop - 200) current = section.getAttribute('id'); });
+                navLinks.forEach(link => { link.classList.remove('nav-active'); if (link.getAttribute('href') === '#' + current) link.classList.add('nav-active'); });
+            });
+        }
+        updateActiveNav();
+        let selectedPackage = null;
+        document.querySelectorAll('.package-card').forEach(card => {
+            card.addEventListener('click', function() {
+                document.querySelectorAll('.package-card').forEach(c => { c.classList.remove('ring-4', 'ring-purple-400/50', 'scale-105'); c.querySelector('.package-check').innerHTML = ''; });
+                this.classList.add('ring-4', 'ring-purple-400/50', 'scale-105');
+                this.querySelector('.package-check').innerHTML = '<i data-lucide="check-circle" class="text-white w-4 h-4"></i>';
+                lucide.createIcons();
+                if (this.id === 'package-daily') selectedPackage = 'Daily Reading - $11.11';
+                else if (this.id === 'package-weekly') selectedPackage = 'Weekly Reading - $33.33';
+                else selectedPackage = 'Monthly Reading - $55.55';
+                const selectedDiv = document.getElementById('selected-package');
+                selectedDiv.classList.remove('hidden');
+                selectedDiv.querySelector('p:last-child').textContent = selectedPackage;
+            });
+        });
+        document.getElementById('booking-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            if (!selectedPackage) { document.getElementById('form-message').textContent = 'Please select a reading package'; document.getElementById('form-message').className = 'mb-6 p-4 rounded-lg bg-red-500/20 border border-red-500/50 text-red-300'; document.getElementById('form-message').classList.remove('hidden'); return; }
+            document.getElementById('form-message').textContent = '✨ Your booking request has been received! We\'ll contact you shortly to confirm your reading.';
+            document.getElementById('form-message').className = 'mb-6 p-4 rounded-lg bg-green-500/20 border border-green-500/50 text-green-300';
+            document.getElementById('form-message').classList.remove('hidden');
+            this.reset();
+            selectedPackage = null;
+            document.getElementById('selected-package').classList.add('hidden');
+            document.querySelectorAll('.package-card').forEach(c => { c.classList.remove('ring-4', 'ring-purple-400/50', 'scale-105'); c.querySelector('.package-check').innerHTML = ''; });
+        });
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) { e.preventDefault(); const target = document.querySelector(this.getAttribute('href')); if (target) { target.scrollIntoView({ behavior: 'smooth', block: 'start' }); document.getElementById('mobile-menu').classList.add('hidden'); } });
+        });
+    </script>
+</body>
+</html>
