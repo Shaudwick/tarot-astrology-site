@@ -2,11 +2,11 @@
 
 **Live site:** [whispernuance.com](https://whispernuance.com)
 
-This repo has two versions. **To show the Whisper Nuance site at whispernuance.com**, deploy the **standalone** version:
+The **Whisper Nuance** site is at the **repo root**: `index.html` + `vercel.json`. No Root Directory needed.
 
-- In **Vercel** → Project **Settings** → **General** → set **Root Directory** to **`standalone`** → Save → **Redeploy**.
-
-Then whispernuance.com will serve `standalone/index.html` (Whisper Nuance, one-page site).
+- In **Vercel** → Project **Settings** → **General** → leave **Root Directory** **empty** (or `.`).  
+- Vercel will serve the root `index.html` (Whisper Nuance).  
+- Push to `main` or click **Redeploy** to update.
 
 ## 📁 Project Structure
 
