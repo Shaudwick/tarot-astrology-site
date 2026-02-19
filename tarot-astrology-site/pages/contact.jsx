@@ -177,10 +177,15 @@ export default function Contact() {
 
       setSent(true);
       formElement.reset();
-      setStep('package');
-      setSelectedPackage(null);
-      setSelectedDate(null);
-      setSelectedTime(null);
+      // Redirect to Stripe checkout for selected package
+      if (packageInfo?.stripeUrl) {
+        setTimeout(() => { window.location.href = packageInfo.stripeUrl; }, 1500);
+      } else {
+        setStep('package');
+        setSelectedPackage(null);
+        setSelectedDate(null);
+        setSelectedTime(null);
+      }
     } catch (err) {
       console.error('EmailJS error:', err);
       setError('Failed to send booking request. Please try again or email us at ' + SITE_EMAIL);
@@ -250,19 +255,6 @@ export default function Contact() {
                       </li>
                     ))}
                   </ul>
-                  {pkg.stripeUrl && (
-                    <a
-                      href={pkg.stripeUrl}
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        e.preventDefault();
-                        window.open(pkg.stripeUrl, 'stripe-checkout', 'width=500,height=700,scrollbars=yes');
-                      }}
-                      className="block w-full py-2.5 px-4 text-center font-semibold rounded-lg bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white text-sm transition-all shadow-lg shadow-purple-500/30 hover:shadow-purple-500/50"
-                    >
-                      Secure checkout — ${pkg.price}
-                    </a>
-                  )}
                 </div>
               ))}
             </div>
@@ -398,9 +390,10 @@ export default function Contact() {
           <div className="max-w-2xl mx-auto">
             <div className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 backdrop-blur-sm border border-purple-500/30 rounded-3xl p-8 md:p-12">
               <p className="text-center text-gray-400 mb-2">Step 3 — Complete your booking</p>
-              <p className="text-center text-purple-200 font-semibold mb-6">
+              <p className="text-center text-purple-200 font-semibold mb-2">
                 {selectedPackage?.name} — {selectedDate?.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' })} at {selectedTime}
               </p>
+              <p className="text-center text-gray-400 text-sm mb-6">Fill out the form, then you&apos;ll be redirected to secure payment. You and Whisper Nuance will both receive a confirmation email.</p>
 
               {error && (
                 <div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-lg flex items-center space-x-2">
@@ -411,7 +404,7 @@ export default function Contact() {
               {sent && (
                 <div className="mb-6 p-4 bg-green-500/20 border border-green-500/50 rounded-lg flex items-center space-x-2">
                   <CheckCircle className="text-green-400" size={20} />
-                  <p className="text-green-300">Your booking request has been received. Check your email for confirmation of your chosen date and time.</p>
+                  <p className="text-green-300">Confirmation sent to you and Whisper Nuance. Redirecting to secure payment...</p>
                 </div>
               )}
 
@@ -451,7 +444,7 @@ export default function Contact() {
                     </>
                   ) : (
                     <>
-                      <span>Submit booking</span>
+                      <span>Complete booking &amp; pay</span>
                       <Sparkles size={20} />
                     </>
                   )}
