@@ -57,6 +57,7 @@ export default function Contact() {
       ],
       popular: false,
       note: 'Same-day bookings may be requested; subject to availability and approval.',
+      stripeUrl: 'https://buy.stripe.com/00w28q7mfgrXb5XgYV4Ja02',
     },
     {
       id: 'weekly',
@@ -73,6 +74,7 @@ export default function Contact() {
       ],
       popular: false,
       note: 'Sessions open from 7 days ahead.',
+      stripeUrl: 'https://buy.stripe.com/aFa9ASeOHb7Da1T0ZX4Ja01',
     },
     {
       id: 'monthly',
@@ -90,6 +92,7 @@ export default function Contact() {
       ],
       popular: true,
       note: 'Sessions open from 7 days ahead.',
+      stripeUrl: 'https://buy.stripe.com/eVqeVc8qj8Zvde53854Ja00',
     },
   ];
 
@@ -239,7 +242,7 @@ export default function Contact() {
                   </div>
                   <p className="text-gray-300 text-sm mb-4 leading-relaxed">{pkg.description}</p>
                   {pkg.note && <p className="text-gray-400 text-xs italic mb-4">{pkg.note}</p>}
-                  <ul className="space-y-2">
+                  <ul className="space-y-2 mb-4">
                     {pkg.features.slice(0, 4).map((f, i) => (
                       <li key={i} className="flex items-start space-x-2 text-gray-300 text-sm">
                         <Sparkles className="text-purple-400 flex-shrink-0 mt-0.5" size={14} />
@@ -247,6 +250,19 @@ export default function Contact() {
                       </li>
                     ))}
                   </ul>
+                  {pkg.stripeUrl && (
+                    <a
+                      href={pkg.stripeUrl}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        e.preventDefault();
+                        window.open(pkg.stripeUrl, 'stripe-checkout', 'width=500,height=700,scrollbars=yes');
+                      }}
+                      className="block w-full py-2.5 px-4 text-center font-semibold rounded-lg bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white text-sm transition-all shadow-lg shadow-purple-500/30 hover:shadow-purple-500/50"
+                    >
+                      Secure checkout — ${pkg.price}
+                    </a>
+                  )}
                 </div>
               ))}
             </div>
