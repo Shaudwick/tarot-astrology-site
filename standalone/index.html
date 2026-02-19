@@ -427,11 +427,15 @@
                     <input type="hidden" name="package_name" id="hid-package-name" value="">
                     <input type="hidden" name="package_price" id="hid-package-price" value="">
                     <input type="hidden" name="package_duration" id="hid-package-duration" value="">
-                    <input type="hidden" name="user_email" value="">
                     <input type="hidden" name="user_phone" value="">
                     <div>
                         <label class="block text-gray-300 mb-2 font-medium">Your Name *</label>
                         <input name="user_name" type="text" required class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all" placeholder="Enter your full name">
+                    </div>
+
+                    <div>
+                        <label class="block text-gray-300 mb-2 font-medium">Email Address *</label>
+                        <input name="user_email" type="email" required class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all" placeholder="For your booking confirmation">
                     </div>
 
                     <div>
@@ -456,7 +460,7 @@
                 </form>
 
                 <p class="text-center text-gray-400 text-sm mt-6">
-                    Whisper Nuance will receive a confirmation. You'll get a receipt from Stripe after payment. Questions? Email <a href="mailto:Whissspernuance@gmail.com" class="text-purple-300 hover:underline">Whissspernuance@gmail.com</a>.
+                    Whisper Nuance will receive a confirmation. After payment, you'll receive a confirmation email with your booked date. Questions? Email <a href="mailto:Whissspernuance@gmail.com" class="text-purple-300 hover:underline">Whissspernuance@gmail.com</a>.
                 </p>
             </div>
         </div>
@@ -551,6 +555,13 @@
             btn.innerHTML = '<div class="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin"></div><span>Sending...</span>';
             try {
                 await emailjs.sendForm('service_6itarzq', 'template_fcvr94b', this, 'Kh4L6GyJRqfgckSwt');
+                const userEmail = this.querySelector('[name="user_email"]').value;
+                sessionStorage.setItem('whisper_booking', JSON.stringify({
+                    user_email: userEmail,
+                    user_name: this.querySelector('[name="user_name"]').value,
+                    booking_date: preferredDate,
+                    package_name: info.name
+                }));
                 msgDiv.textContent = 'Confirmation sent to Whisper Nuance. Redirecting to secure payment...';
                 msgDiv.className = 'mb-6 p-4 rounded-lg bg-green-500/20 border border-green-500/50 text-green-300';
                 msgDiv.classList.remove('hidden');

@@ -165,6 +165,15 @@ export default function Contact() {
       }
 
       setSent(true);
+      const userEmail = formElement.querySelector('[name="user_email"]')?.value;
+      if (userEmail && packageInfo?.stripeUrl) {
+        sessionStorage.setItem('whisper_booking', JSON.stringify({
+          user_email: userEmail,
+          user_name: formElement.querySelector('[name="user_name"]')?.value || '',
+          booking_date: `${dateStr} at ${timeStr}`,
+          package_name: packageInfo.name
+        }));
+      }
       formElement.reset();
       // Redirect to Stripe checkout for selected package
       if (packageInfo?.stripeUrl) {
@@ -382,7 +391,7 @@ export default function Contact() {
               <p className="text-center text-purple-200 font-semibold mb-2">
                 {selectedPackage?.name} — {selectedDate?.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' })} at {selectedTime}
               </p>
-              <p className="text-center text-gray-400 text-sm mb-6">Fill out the form, then you&apos;ll be redirected to secure payment. Whisper Nuance will receive a confirmation. You&apos;ll get a receipt from Stripe after payment.</p>
+              <p className="text-center text-gray-400 text-sm mb-6">Fill out the form, then you&apos;ll be redirected to secure payment. After payment, you&apos;ll receive a confirmation email with your booked date.</p>
 
               {error && (
                 <div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-lg flex items-center space-x-2">
@@ -404,11 +413,14 @@ export default function Contact() {
                 <input type="hidden" name="package_price" value={selectedPackage ? packages.find(p => p.id === selectedPackage.id)?.price : ''} />
                 <input type="hidden" name="package_duration" value={selectedPackage ? packages.find(p => p.id === selectedPackage.id)?.duration : ''} />
 
-                <input type="hidden" name="user_email" value="" />
                 <input type="hidden" name="user_phone" value="" />
                 <div>
                   <label className="block text-gray-300 mb-2 font-medium">Your Name *</label>
                   <input name="user_name" type="text" required className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500" placeholder="Full name" />
+                </div>
+                <div>
+                  <label className="block text-gray-300 mb-2 font-medium">Email Address *</label>
+                  <input name="user_email" type="email" required className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500" placeholder="For your booking confirmation" />
                 </div>
                 <div>
                   <label className="block text-gray-300 mb-2 font-medium">What guidance are you seeking? *</label>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You — Whisper Nuance</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <style>
+        body { font-family: 'Georgia', serif; }
+        .breathing { animation: breathe 4s ease-in-out infinite; }
+        @keyframes breathe { 0%, 100% { opacity: 0.9; transform: scale(1); } 50% { opacity: 1; transform: scale(1.02); } }
+    </style>
+</head>
+<body class="min-h-screen bg-gradient-to-b from-slate-900 via-indigo-950/50 to-slate-900 text-white flex items-center justify-center cursor-pointer" id="click-area">
+    <div class="text-center px-6 max-w-2xl breathing">
+        <div class="text-6xl mb-8">✨</div>
+        <h1 class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-200 via-pink-200 to-purple-200 bg-clip-text text-transparent">Your Reading Is Confirmed</h1>
+        <p class="text-xl text-gray-300 leading-relaxed mb-4">The cards have aligned with your journey. Your confirmation has been sent to your inbox.</p>
+        <p class="text-gray-400">Click anywhere to return home</p>
+    </div>
+    <script>
+        emailjs.init('Kh4L6GyJRqfgckSwt');
+        (function() {
+            try {
+                const data = sessionStorage.getItem('whisper_booking');
+                if (data) {
+                    const { user_email, user_name, booking_date, package_name } = JSON.parse(data);
+                    if (user_email) {
+                        emailjs.send('service_6itarzq', 'template_aybycuf', {
+                            user_email,
+                            user_name: user_name || '',
+                            user_phone: '',
+                            message: 'Your reading is confirmed.',
+                            booking_date: booking_date || 'As requested',
+                            booking_time: booking_date || '',
+                            package_name: package_name || 'Tarot Reading',
+                            package_price: '',
+                            package_duration: ''
+                        }, 'Kh4L6GyJRqfgckSwt').catch(() => {});
+                    }
+                    sessionStorage.removeItem('whisper_booking');
+                }
+            } catch (e) {}
+        })();
+        document.getElementById('click-area').addEventListener('click', function() {
+            window.location.href = '/';
+        });
+    </script>
+</body>
+</html>
