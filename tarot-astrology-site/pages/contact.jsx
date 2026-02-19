@@ -153,18 +153,7 @@ export default function Contact() {
     setVal('package_duration', packageInfo?.duration);
 
     try {
-      // Confirmation to customer (includes their chosen date)
-      const responseToGuest = await emailjs.sendForm(
-        'service_6itarzq',
-        'template_aybycuf',
-        formElement,
-        'Kh4L6GyJRqfgckSwt'
-      );
-      if (!responseToGuest || responseToGuest.status >= 400) {
-        throw new Error('Failed to send confirmation email to guest.');
-      }
-
-      // Notification to owner: Whissspernuance@gmail.com (set "To" in EmailJS template)
+      // Notification to owner: Whissspernuance@gmail.com (customer gets receipt from Stripe)
       const responseToOwner = await emailjs.sendForm(
         'service_6itarzq',
         'template_fcvr94b',
@@ -393,7 +382,7 @@ export default function Contact() {
               <p className="text-center text-purple-200 font-semibold mb-2">
                 {selectedPackage?.name} — {selectedDate?.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' })} at {selectedTime}
               </p>
-              <p className="text-center text-gray-400 text-sm mb-6">Fill out the form, then you&apos;ll be redirected to secure payment. You and Whisper Nuance will both receive a confirmation email.</p>
+              <p className="text-center text-gray-400 text-sm mb-6">Fill out the form, then you&apos;ll be redirected to secure payment. Whisper Nuance will receive a confirmation. You&apos;ll get a receipt from Stripe after payment.</p>
 
               {error && (
                 <div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-lg flex items-center space-x-2">
@@ -404,7 +393,7 @@ export default function Contact() {
               {sent && (
                 <div className="mb-6 p-4 bg-green-500/20 border border-green-500/50 rounded-lg flex items-center space-x-2">
                   <CheckCircle className="text-green-400" size={20} />
-                  <p className="text-green-300">Confirmation sent to you and Whisper Nuance. Redirecting to secure payment...</p>
+                  <p className="text-green-300">Confirmation sent to Whisper Nuance. Redirecting to secure payment...</p>
                 </div>
               )}
 
@@ -415,17 +404,11 @@ export default function Contact() {
                 <input type="hidden" name="package_price" value={selectedPackage ? packages.find(p => p.id === selectedPackage.id)?.price : ''} />
                 <input type="hidden" name="package_duration" value={selectedPackage ? packages.find(p => p.id === selectedPackage.id)?.duration : ''} />
 
+                <input type="hidden" name="user_email" value="" />
+                <input type="hidden" name="user_phone" value="" />
                 <div>
                   <label className="block text-gray-300 mb-2 font-medium">Your Name *</label>
                   <input name="user_name" type="text" required className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500" placeholder="Full name" />
-                </div>
-                <div>
-                  <label className="block text-gray-300 mb-2 font-medium">Email Address *</label>
-                  <input name="user_email" type="email" required className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500" placeholder="your@email.com" />
-                </div>
-                <div>
-                  <label className="block text-gray-300 mb-2 font-medium">Phone (optional)</label>
-                  <input name="user_phone" type="tel" className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500" placeholder="(555) 123-4567" />
                 </div>
                 <div>
                   <label className="block text-gray-300 mb-2 font-medium">What guidance are you seeking? *</label>
